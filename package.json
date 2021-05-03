@@ -1,0 +1,38 @@
+{
+  "name": "hugofier",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Fry",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "cmake-js": {
+    "runtime": "electron",
+    "runtimeVersion": "10.1.5",
+    "arch": "x64"
+  },
+  "build": {
+    "productName": "Hugofier",
+    "appId": "Fry.Hugofier",
+    "files": [
+      "main.js",
+      "public/**/*"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "portable": {
+      "artifactName": "hugofier.exe"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "devDependencies": {
+    "electron": "^11.0.3",
+    "electron-builder": "^22.9.1"
+  }
+}
